@@ -24,7 +24,7 @@
 
         setInterval(function(){
             chatApp.getMessages();
-        }, 3000);
+        }, 1000);
 
         var app = Sammy('#main-content', function () {
             this.get('#/', function () {

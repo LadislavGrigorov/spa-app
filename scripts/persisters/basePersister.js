@@ -1,5 +1,6 @@
 /*globals define*/
 define(['userPersister', 'dataPersister'], function(UserPersister, DataPersister){
+    'use strict';
     var BasePersister;
     BasePersister = (function(){
         function BasePersister(resourceURL){
@@ -12,7 +13,7 @@ define(['userPersister', 'dataPersister'], function(UserPersister, DataPersister
             var key = this.user.getLocalStorageNickKey();
             var keyValue = localStorage.getItem(key);
             if (keyValue) {
-                if (keyValue != "") {
+                if (keyValue !== "") {
                     return true;
                 }
             }
@@ -23,7 +24,7 @@ define(['userPersister', 'dataPersister'], function(UserPersister, DataPersister
             get: function(resourceURL){
                 return new BasePersister(resourceURL);
             }
-        }
+        };
     }());
     return BasePersister;
 });

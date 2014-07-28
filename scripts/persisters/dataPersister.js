@@ -1,5 +1,6 @@
 /*globals define*/
 define(['requester'], function (requester) {
+    'use strict';
     var DataPersister;
     DataPersister = (function () {
         function DataPersister(resourceURL) {
@@ -9,7 +10,6 @@ define(['requester'], function (requester) {
         DataPersister.prototype.messages = function(){
             var self = this;
             return requester.getJSON(self.resourceURL);
-            return messages;
         };
 
         return DataPersister;

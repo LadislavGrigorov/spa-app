@@ -1,5 +1,6 @@
 /*globals define*/
 define(['jquery', 'mustache'], function($, Mustache){
+    'use strict';
     var UI;
     UI = (function(){
         function UI(selector){

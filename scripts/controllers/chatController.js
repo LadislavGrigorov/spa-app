@@ -1,5 +1,6 @@
-/*globals define*/
-define(['basePersister', 'ui', 'jquery', 'q'], function (basePersister, UI, $, Q) {
+/*globals define, console*/
+define(['basePersister', 'ui', 'jquery'], function (basePersister, UI, $) {
+    'use strict';
     var ChatController;
     ChatController = (function () {
         function ChatController(selector, resourceURL) {
@@ -56,10 +57,10 @@ define(['basePersister', 'ui', 'jquery', 'q'], function (basePersister, UI, $, Q
                     text: message
                 })
                     .then(function () {
-                        console.log('success posted')
+                        console.log('success posted');
                     }, function (err) {
                         console.log(err);
-                    })
+                    });
             });
         };
 
