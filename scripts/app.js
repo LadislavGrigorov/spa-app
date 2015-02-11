@@ -17,7 +17,7 @@
     });
 
     require(['sammy', 'jquery', 'chatController'], function (Sammy, $, ChatController) {
-        var resourceURL = 'http://crowd-chat.herokuapp.com/posts';
+        var resourceURL = 'https://crowd-chat.herokuapp.com/posts';
         var chatApp = new ChatController('#main-content', resourceURL);
 
         chatApp.addEvents();
